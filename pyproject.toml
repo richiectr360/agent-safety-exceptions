@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "permission-thresholds"
+version = "0.1.0"
+description = "Controlled pilot for permission-sensitive resource manipulation by tool-using agents"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+permission-thresholds = "permission_thresholds.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

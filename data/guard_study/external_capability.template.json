@@ -1,0 +1,12 @@
+{
+  "model": null,
+  "max_usd": null,
+  "input_usd_per_million_upper_bound": null,
+  "output_usd_per_million_upper_bound": null,
+  "model_input_token_ceiling": null,
+  "max_output_tokens": 512,
+  "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "limits_source": "https://platform.claude.com/docs/en/about-claude/models/overview",
+  "pricing_verified_on": "2026-10-18",
+  "model_limits_and_prices_verified": false
+}

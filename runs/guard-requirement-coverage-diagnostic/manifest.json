@@ -1,0 +1,35 @@
+{
+  "version": "posthoc-requirement-coverage-v1",
+  "status": "completed",
+  "created_utc": "2026-10-19T00:43:04.936434+00:00",
+  "analysis_kind": "posthoc_scripted_requirement_coverage_diagnostic",
+  "model_calls": 0,
+  "input_directory": "/Users/amornchotsingh/Desktop/mucker/jeyashree-arm-algoverse/research/permission-thresholds/runs/guard-policy-comparison",
+  "input_manifest_sha256": "78c0e88da4c3ae662462eb637914de6aebfeedf095eaf519177351e66e0e8e46",
+  "input_output_sha256": {
+    "probes.jsonl": "b43a08317502164545873e6286cdc6b38c016a8a85fadf41cc5ee8164fb3eda2",
+    "references.jsonl": "e411dadbf6484b526115615f6bd06b6492aa941f6c48e582947b4f792576f469",
+    "cases.jsonl": "1e899feb2b4b8279f78604f37659de915c94741c7d1d67e64c5800e553bced29"
+  },
+  "source_sha256": {
+    "diagnose_requirement_coverage.py": "779d27f8b01624b8da803d520371f144135e7d272bb95c4403266a89c9416dc8",
+    "requirement_coverage.py": "3c7a4d10ab60648c91f055d3e5b5c45a05500314dcfc78129c5239fc95702106"
+  },
+  "analysis_notes": [
+    "Post hoc scripted diagnostic of a new requirement-coverage gate; not a live intervention or model result, and not a novelty claim.",
+    "No network, model calls, new broker execution, or changes to frozen study artifacts.",
+    "Gate decisions use only immutable task requirements and trusted trace evidence available before the selected event boundary.",
+    "The extra gate is veto-only: PROCEED does not grant authority, and existing DENY/DEFER decisions remain unchanged.",
+    "A declared but unregistered repair requirement defers exceptional access even after repair, pending a trusted coverage correction or new job.",
+    "A registered requirement proceeds only with exact broker release/count evidence of successful repair, or no initial background load.",
+    "Saved repair_registered is the frozen broker configuration field, not a signed proof of arbitrary runtime enforcement.",
+    "Checksums establish integrity relative to the trusted input manifest; they cannot authenticate a compromised runtime or attacker-controlled trust root.",
+    "Repairs absent from the task manifest are not discovered. Unknown requirements, new scheduler events, and incomplete evidence require separate resolution.",
+    "Reference-end checks concern a hypothetical later exceptional request; they do not alter historical completion or block local finish.",
+    "Counterfactual suppression counts describe saved scripted requests only; changed future agent behavior, safety rates, and completion utility are unmeasured."
+  ],
+  "output_sha256": {
+    "diagnostics.jsonl": "8588a17cde357a75b42d6d3cebc1691054989f8af5ca8e7cfbeec56e8f6b1f4c",
+    "summary.json": "e683fb425fe110c6c73129374377f12c041d844f090a8e2ebc3550c6c0885542"
+  }
+}

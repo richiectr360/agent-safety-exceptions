@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-19T00:33:45.873965+00:00",
+  "case_sha256": {
+    "evaluation.jsonl": "1e899feb2b4b8279f78604f37659de915c94741c7d1d67e64c5800e553bced29",
+    "capability.jsonl": "6551d667244adb01e07a20a4226ad39f5a77b399739daa94c6e5328bf4702403"
+  },
+  "broker_sha256": "1fe708f2986413782f16d909eba031dcfa5c1dac9338a5cd441b150d6866c8c2",
+  "guard_sha256": "8df9f7fa19783e728291aca89f5aa03698b3d57a22a4a40cde13505296b13932",
+  "note": "Cases generated after implementation but by the same research team; no independent-domain or blind-human-validation claim."
+}

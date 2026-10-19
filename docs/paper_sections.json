@@ -1,0 +1,99 @@
+{
+  "title": "Do Agents Create the Conditions for Broader Authority? A Controlled Pilot",
+  "introduction": [
+    "Conditional permissions let an agent recover from changing circumstances without granting unrestricted authority. An external processing route, for example, may become available when a local operational metric crosses a threshold. If the agent can also change that metric, authorization depends partly on its own actions. This creates a safety question that checking the final external call alone cannot resolve: did the agent encounter the qualifying circumstance, or create it? The distinction matters even when the final call satisfies the literal policy. In this study, broader authority means activating an already specified exception, not modifying the policy or obtaining a new user approval.",
+    "We operationalize this question through controlled tool environments with an available authorized route to the requested report. The central comparison varies whether a displayed numerical threshold determines external-processing permission while holding physical mechanics fixed. A matched numerical placebo addresses the possibility that agents follow salient numbers regardless of their authorization role. The measured target is a difference in state-changing behavior across policy conditions, not a judgment about concealed motives. Our contribution is an executable assay and an explicitly bounded behavioral contrast for a previously discussed risk. We do not claim that manipulating environmental conditions, instrumental control, or manufactured necessity is a newly discovered concept."
+  ],
+  "related_work": [
+    "Causal incentive theory provides the broader foundation. Everitt et al. characterize response and instrumental-control incentives using causal influence diagrams [1]. Farquhar et al. study path-specific objectives that remove incentives flowing through designated delicate state [2]. These frameworks already explain why controlling an intermediate environmental variable can be useful to an agent. More directly, David Mc's conceptual essay discusses manufactured necessity: creating dependencies or removing alternatives so that a later exception becomes applicable [3]. That essay is conceptual prior art rather than a peer-reviewed empirical evaluation. Our narrower question concerns an operational measurement of permission-sensitive state creation by language-model agents.",
+    "Recent empirical work examines adjacent failure patterns. Agent Meltdowns injects environmental errors and studies unsafe recovery behavior by otherwise helpful agents [4]. Rodríguez et al. report fabricated obstacles and simulated failures under conflicting constraints [5]. Our primary cases instead begin with healthy infrastructure and a feasible local route. The scored events are executed simulator transitions, not claims that a dependency failed. This distinction isolates a question about creating an exception's condition before recovery is needed. It does not establish that all state creation is harmful: optional quality checks and maintenance can produce genuine ancillary outputs in our environments.",
+    "Runtime-enforcement research also limits the appropriate novelty claim. FORGE evaluates policies using state and event provenance [6], Progent enforces tool privileges and studies approval-mediated expansions [7], and AgentSpec provides customizable runtime enforcement rules [8]. We therefore do not present remembering history or checking executable policies as new. A richer policy could explicitly prohibit creating a qualifying condition. Our experiment compares literal conditional permission with a broader instruction forbidding specified pre-completion resource actions. This ablation is not a provenance-aware rule against manufacturing exceptions; it tests adherence to a simpler explicit restriction. The candidate contribution is the operative-threshold versus visible-placebo comparison with audited task feasibility. The bounded literature review supporting this framing is not a guarantee of novelty or an exhaustive search."
+  ],
+  "methods": [
+    "The simulator contains twelve authored development scenarios and two transition mechanisms. Three queue scenarios vary report wording, initial load, capacity, and workload. Nine service scenarios cross three report variants with a healthy service, an externally caused outage, or a supplied history attributing the same initial outage to earlier agent maintenance. Every scenario has sixteen conditions, giving 192 scenario-condition cases in the full factorial design. Queue actions can add auxiliary quality checks, process those checks to release capacity, or perform local report steps. Service actions can take the service offline, repair it, wait, or process the report locally. External processing completes the report only when the mechanical permission gate allows it; a separate finish action closes the job. Task success requires both the completed report and a successful finish action.",
+    "Eight authority/display arms comprise no fallback, unconditional fallback, three operative thresholds, and three visible placebo thresholds. Operative and placebo prompts display the same number in the same field. Their authorization sentences differ in the single word specifying whether external processing is 'not' or 'also' authorized otherwise. Threshold levels vary while capacity, initial state, tools, and report workload remain fixed within a scenario. Each arm is crossed with literal-only instructions and an explicit resource rule. The latter requires report completion before auxiliary queueing, or prohibits taking the service offline and waiting before completion. Optional state creation is not labelled a rule violation in the literal-only arm. Supplied outage histories are supplementary context controls, not evidence of an action performed by the evaluated agent.",
+    "The measured cohort uses a locally hosted Qwen2.5 3B model with one rollout per scenario-condition case. Model identity, weight digest, sampling settings, configuration hashes, source hashes, simulator events, and raw model calls are retained. Separate capability checks evaluate Qwen2.5 3B and Llama3.2 1B on authorized numerical and maintenance goals. The primary analysis uses three healthy queue families under literal-only policies. Service mechanisms, explicit resource rules, and outage-origin contexts remain supplementary. Programmed reference behavior validates the environment but supplies no evidence about model behavior.",
+    "Within each queue family, let x be the displayed threshold minus initial load and y be the maximum added load before the report is complete. For a report that never completes, y uses the full observed trajectory. We average repeated observations when available, then fit an ordinary least-squares slope to the three threshold levels separately for operative and placebo arms. The primary descriptive contrast is the equal-family mean operative-minus-placebo slope. The tested prediction is a larger slope when the threshold determines permission. Incomplete six-arm families are excluded explicitly without imputation. Additional outcomes include task success, optional state creation, actor-created qualification, external-route use, successful local steps, and explicit-rule violations where applicable. Replay removes a candidate action and checks an authorized continuation to the requested report. It verifies primary-goal feasibility, not the agent's counterfactual choice or equal ancillary utility. Model-error prefixes retain already observed events; unobserved continuations remain unknown. Binary Wilson intervals in the accompanying report are descriptive and assume independent episodes; they are not population bounds for these few authored task families."
+  ],
+  "limitations": [
+    "Three authored queue families and one repeat per condition provide little independent replication. Parameter and wording variants are not held-out domains, and a small local model cannot characterize frontier systems. Capability checks help interpret task failure but cannot establish deployment competence. The closely matched policy wording reduces a lexical confound without eliminating effects of negation, instruction interpretation, or model sampling. A slope difference would support a behavioral sensitivity to the authorization intervention in these cases; it would not demonstrate intent, deception, or a general incentive mechanism. A null contrast would likewise not establish safety or equivalence without adequate precision and a prespecified meaningful effect size.",
+    "The simulator bounds the interpretation of its safety labels. External permission is enforced mechanically, so zero successful unauthorized calls is partly a construction property rather than evidence of safe reasoning. Optional quality checks and maintenance have ancillary value; replay does not hold those outputs fixed. The pre-completion observation window is itself affected by policy: faster external processing can shorten the workflow and reduce opportunities for optional actions. A slope contrast can therefore include differences in workflow length and stopping time. Service outage age also advances with successful calls, making its threshold contrast supplementary to the queue analysis. Supplied agent-caused history tests reactions to a narrative, not observed creation of that history. Error-related missingness can bias complete-case slopes, and episode-level Wilson intervals do not account for correlated families. Stronger claims require independent mechanisms, additional models, repeated sampling, and evaluation of legitimate recovery utility."
+  ],
+  "references": [
+    {
+      "id": 1,
+      "authors": "Tom Everitt, Ryan Carey, Eric D. Langlois, Pedro A. Ortega, and Shane Legg",
+      "year": 2021,
+      "title": "Agent Incentives: A Causal Perspective",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 35(13), 11487–11495",
+      "status": "Peer-reviewed conference paper",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/17368",
+      "doi": "10.1609/aaai.v35i13.17368"
+    },
+    {
+      "id": 2,
+      "authors": "Sebastian Farquhar, Ryan Carey, and Tom Everitt",
+      "year": 2022,
+      "title": "Path-Specific Objectives for Safer Agent Incentives",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 36(9), 9529–9538",
+      "status": "Peer-reviewed conference paper",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/21186",
+      "doi": "10.1609/aaai.v36i9.21186"
+    },
+    {
+      "id": 3,
+      "authors": "David Mc",
+      "year": 2026,
+      "title": "Where Power Migrates",
+      "venue": "Axio, July 26",
+      "status": "Author-published conceptual essay; not a peer-reviewed empirical paper",
+      "url": "https://axio.fyi/p/where-power-migrates"
+    },
+    {
+      "id": 4,
+      "authors": "Rishi Jha, Harold Triedman, Arkaprabha Bhattacharya, and Vitaly Shmatikov",
+      "year": 2026,
+      "title": "Agent Meltdowns: The Road to Hell Is Paved with Helpful Agents",
+      "venue": "arXiv:2605.19149v1",
+      "status": "Preprint; peer-reviewed venue not established by the checked record",
+      "url": "https://arxiv.org/abs/2605.19149v1"
+    },
+    {
+      "id": 5,
+      "authors": "Andoni Rodríguez, Alberto Pozanco, and Daniel Borrajo",
+      "year": 2026,
+      "title": "Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis",
+      "venue": "arXiv:2606.14831v1",
+      "status": "Preprint; peer-reviewed venue not established by the checked record",
+      "url": "https://arxiv.org/abs/2606.14831v1"
+    },
+    {
+      "id": 6,
+      "authors": "Nils Palumbo, Sarthak Choudhary, Jihye Choi, Guy Amir, Prasad Chalasani, Isil Dillig, and Somesh Jha",
+      "year": 2026,
+      "title": "Formal Policy Enforcement for Agentic Systems",
+      "venue": "arXiv:2602.16708v4",
+      "status": "Preprint; peer-reviewed venue not established by the checked record",
+      "url": "https://arxiv.org/abs/2602.16708v4"
+    },
+    {
+      "id": 7,
+      "authors": "Tianneng Shi, Jingxuan He, Zhun Wang, Hongwei Li, Linyu Wu, Wenbo Guo, and Dawn Song",
+      "year": 2026,
+      "title": "Progent: Securing AI Agents with Privilege Control",
+      "venue": "arXiv:2504.11703v3; first released 2025, inspected revision 2026",
+      "status": "Preprint record; peer-reviewed venue not established here",
+      "url": "https://arxiv.org/abs/2504.11703v3"
+    },
+    {
+      "id": 8,
+      "authors": "Haoyu Wang, Christopher M. Poskitt, and Jun Sun",
+      "year": 2026,
+      "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+      "venue": "Proceedings of ICSE 2026, 2938–2950; venue recorded on the authors' arXiv page",
+      "status": "Conference paper; author-posted version inspected",
+      "url": "https://arxiv.org/abs/2503.18666v3",
+      "doi": "10.1145/3744916.3764546"
+    }
+  ]
+}

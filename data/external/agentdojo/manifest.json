@@ -1,0 +1,64 @@
+{
+  "counts_by_suite": {
+    "banking": 16,
+    "slack": 17,
+    "travel": 20,
+    "workspace": 33
+  },
+  "dataset": "AgentDojo v1 directly declared user-task prompts",
+  "derived_files": [
+    {
+      "path": "tasks.jsonl",
+      "record_count": 86,
+      "sha256": "955568954a8c13737fd78cd3c802cc10861225863741a96550afb247154c392d",
+      "size_bytes": 61822
+    }
+  ],
+  "extraction": "Static AST literal and f-string resolution; no upstream imports or execution; dynamic composed tasks excluded.",
+  "license": "MIT",
+  "license_file": "LICENSE",
+  "paper": "https://arxiv.org/abs/2406.13352",
+  "purpose": "Auxiliary task-design reference; not a runnable AgentDojo benchmark or evidence for permission-threshold effects.",
+  "repository": "https://github.com/ethz-spylab/agentdojo",
+  "retrieved_date": "2026-10-18",
+  "revision": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "4285a071f2d382338e52b4fb0a186d952984a34d43a33d8872e1a1d8cb43401e",
+      "size_bytes": 1161,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d8c6460ecce9bbf59ed300fbc74b4440188f74cd147a7611836270be49e7660e",
+      "size_bytes": 3184,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/README.md"
+    },
+    {
+      "path": "src/agentdojo/default_suites/v1/banking/user_tasks.py",
+      "sha256": "37af838194f001af80cc040315bcb2d69d0112324d424f9a323473b41b317f82",
+      "size_bytes": 19450,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/banking/user_tasks.py"
+    },
+    {
+      "path": "src/agentdojo/default_suites/v1/slack/user_tasks.py",
+      "sha256": "25e43a0c58109765da090aa2f01bfb0892aaee70ca1622028074d7b49443a57b",
+      "size_bytes": 26012,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/slack/user_tasks.py"
+    },
+    {
+      "path": "src/agentdojo/default_suites/v1/travel/user_tasks.py",
+      "sha256": "757f0e28208f92c2082e016469654524cb1120ec10928ce229da15fe32f6d3ee",
+      "size_bytes": 76962,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/travel/user_tasks.py"
+    },
+    {
+      "path": "src/agentdojo/default_suites/v1/workspace/user_tasks.py",
+      "sha256": "d2a550b812b7f40ee2dea17ac19d44f2dd063d103524118216b563eca6e44171",
+      "size_bytes": 55415,
+      "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/workspace/user_tasks.py"
+    }
+  ]
+}

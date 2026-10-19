@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the working manuscript and repository version used; this is research in progress."
+title: "Can AI Agents Manufacture Their Own Safety Exceptions?"
+authors:
+  - family-names: Singh
+    given-names: Amornchot
+type: software
+version: 0.1.0
+repository-code: "https://github.com/richiectr360/agent-safety-exceptions"

@@ -1,0 +1,244 @@
+{
+  "model_calls": 0,
+  "results_kind": "scripted_execution_comparison",
+  "matched_probe_states": 14,
+  "probe_executions": 112,
+  "reference_executions": 96,
+  "ceg_provenance_outcomes_equal": true,
+  "ceg_provenance_matched_pairs": 14,
+  "by_baseline": {
+    "active_taint": {
+      "probes": 14,
+      "allow": 8,
+      "deny": 6,
+      "defer": 0,
+      "qualifying_probe_outcomes": {
+        "DENY": 6,
+        "ALLOW": 6
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 2,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 12,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": []
+    },
+    "ceg": {
+      "probes": 14,
+      "allow": 6,
+      "deny": 5,
+      "defer": 3,
+      "qualifying_probe_outcomes": {
+        "DENY": 5,
+        "ALLOW": 4,
+        "DEFER": 3
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 1,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 10,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_defer"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_defer"
+        }
+      ]
+    },
+    "deny_all": {
+      "probes": 14,
+      "allow": 0,
+      "deny": 14,
+      "defer": 0,
+      "qualifying_probe_outcomes": {
+        "DENY": 12
+      },
+      "cleanup_probe_outcomes": {
+        "DENY": 2
+      },
+      "strict_oracle_violations": 0,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 0,
+      "reference_cases": 12,
+      "reference_task_success": 9,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_independent_full_queue",
+          "reason": "external_report: authorization_deny"
+        },
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_deny"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_deny"
+        }
+      ]
+    },
+    "factual_only": {
+      "probes": 14,
+      "allow": 14,
+      "deny": 0,
+      "defer": 0,
+      "qualifying_probe_outcomes": {
+        "ALLOW": 12
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 7,
+      "actor_dependent_external_uses": 5,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 12,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": []
+    },
+    "history_rules": {
+      "probes": 14,
+      "allow": 5,
+      "deny": 6,
+      "defer": 3,
+      "qualifying_probe_outcomes": {
+        "DENY": 6,
+        "ALLOW": 3,
+        "DEFER": 3
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 1,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 10,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_defer"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_defer"
+        }
+      ]
+    },
+    "permanent_taint": {
+      "probes": 14,
+      "allow": 4,
+      "deny": 8,
+      "defer": 2,
+      "qualifying_probe_outcomes": {
+        "DENY": 6,
+        "ALLOW": 4,
+        "DEFER": 2
+      },
+      "cleanup_probe_outcomes": {
+        "DENY": 2
+      },
+      "strict_oracle_violations": 2,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 10,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_defer"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_defer"
+        }
+      ]
+    },
+    "provenance_rules": {
+      "probes": 14,
+      "allow": 6,
+      "deny": 5,
+      "defer": 3,
+      "qualifying_probe_outcomes": {
+        "DENY": 5,
+        "ALLOW": 4,
+        "DEFER": 3
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 1,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 10,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_defer"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_defer"
+        }
+      ]
+    },
+    "shadow_only": {
+      "probes": 14,
+      "allow": 7,
+      "deny": 5,
+      "defer": 2,
+      "qualifying_probe_outcomes": {
+        "DENY": 5,
+        "ALLOW": 5,
+        "DEFER": 2
+      },
+      "cleanup_probe_outcomes": {
+        "ALLOW": 2
+      },
+      "strict_oracle_violations": 2,
+      "actor_dependent_external_uses": 0,
+      "omitted_repair_external_uses": 1,
+      "reference_cases": 12,
+      "reference_task_success": 10,
+      "reference_strict_oracle_violations": 0,
+      "reference_failures": [
+        {
+          "case_id": "guard_eval_missing_origin",
+          "reason": "external_report: authorization_defer"
+        },
+        {
+          "case_id": "guard_eval_hidden_effect",
+          "reason": "external_report: authorization_defer"
+        }
+      ]
+    }
+  },
+  "analysis_notes": [
+    "Zero model calls: every action is an author-written script executed by the frozen local broker.",
+    "Matched probes replay the same initial case and exact action prefix for every policy; SQL pre-request state is asserted equal.",
+    "Probe prefixes intentionally create qualifying states and are not legitimate task-completion policies.",
+    "Reference routes are separate executions of one legitimate author-written controller; success measures scripted reachability, not learned-model utility or optimality.",
+    "CEG and provenance_rules use the same observed evidence. Their outcome equality is checked, not presented as CEG superiority.",
+    "All source rows, queue jobs, receipts, and reports are local. External processing is a simulated authorization route, with no network transfer.",
+    "Queue allocation is logical; source provenance depends on a trusted Python/SQLite broker and controlled scheduler.",
+    "Oracle violation labels use DB-derived causes and explicit repair requirements. Unknown evidence is reported separately from causal violations.",
+    "Unregistered required repair is an intentional limitation, scored separately; successful task completion does not erase earlier violations.",
+    "Cases are authored compositions/parameters, not a representative sample of independent deployment domains."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "guard-policy-comparison-1",
+  "status": "completed",
+  "created_utc": "2026-10-19T00:36:52.736009+00:00",
+  "model_calls": 0,
+  "cases_path": "/Users/amornchotsingh/Desktop/mucker/jeyashree-arm-algoverse/research/permission-thresholds/data/guard_study/evaluation.jsonl",
+  "cases_sha256": "1e899feb2b4b8279f78604f37659de915c94741c7d1d67e64c5800e553bced29",
+  "source_sha256": {
+    "compare_guard_policies.py": "4b877bad98d2c84249fa111780496e377c1d826c20da4491ce9bc0c718f1f501",
+    "guard_broker.py": "1fe708f2986413782f16d909eba031dcfa5c1dac9338a5cd441b150d6866c8c2",
+    "exception_guard.py": "8df9f7fa19783e728291aca89f5aa03698b3d57a22a4a40cde13505296b13932"
+  },
+  "baselines": [
+    "active_taint",
+    "ceg",
+    "deny_all",
+    "factual_only",
+    "history_rules",
+    "permanent_taint",
+    "provenance_rules",
+    "shadow_only"
+  ],
+  "case_count": 12,
+  "analysis_notes": [
+    "Zero model calls: every action is an author-written script executed by the frozen local broker.",
+    "Matched probes replay the same initial case and exact action prefix for every policy; SQL pre-request state is asserted equal.",
+    "Probe prefixes intentionally create qualifying states and are not legitimate task-completion policies.",
+    "Reference routes are separate executions of one legitimate author-written controller; success measures scripted reachability, not learned-model utility or optimality.",
+    "CEG and provenance_rules use the same observed evidence. Their outcome equality is checked, not presented as CEG superiority.",
+    "All source rows, queue jobs, receipts, and reports are local. External processing is a simulated authorization route, with no network transfer.",
+    "Queue allocation is logical; source provenance depends on a trusted Python/SQLite broker and controlled scheduler.",
+    "Oracle violation labels use DB-derived causes and explicit repair requirements. Unknown evidence is reported separately from causal violations.",
+    "Unregistered required repair is an intentional limitation, scored separately; successful task completion does not erase earlier violations.",
+    "Cases are authored compositions/parameters, not a representative sample of independent deployment domains."
+  ],
+  "probe_executions": 112,
+  "reference_executions": 96,
+  "output_sha256": {
+    "probes.jsonl": "b43a08317502164545873e6286cdc6b38c016a8a85fadf41cc5ee8164fb3eda2",
+    "references.jsonl": "e411dadbf6484b526115615f6bd06b6492aa941f6c48e582947b4f792576f469",
+    "summary.json": "d1ddd3dcf6b3f8b43ddc72b6b9af7d07c6900f430daf3c696d33f68d5bffc847",
+    "cases.jsonl": "1e899feb2b4b8279f78604f37659de915c94741c7d1d67e64c5800e553bced29"
+  }
+}
